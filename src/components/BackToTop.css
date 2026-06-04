@@ -1,0 +1,11 @@
+.btt {
+  position:fixed; bottom:28px; right:28px; z-index:200;
+  width:44px; height:44px; border-radius:50%;
+  background:var(--violet); color:#fff;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 20px rgba(124,58,237,.5);
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .3s,transform .3s,box-shadow .2s;
+}
+.btt--show { opacity:1; transform:none; pointer-events:all; }
+.btt:hover { box-shadow:0 8px 32px rgba(124,58,237,.7); transform:translateY(-2px); }

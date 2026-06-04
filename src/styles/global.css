@@ -1,0 +1,95 @@
+/* ─── Tokens ────────────────────────────────────────────── */
+:root {
+  --violet:       #7c3aed;
+  --violet-mid:   #8b48f5;
+  --violet-light: #a78bfa;
+  --violet-dim:   rgba(167,139,250,0.7);
+  --emerald:      #34d399;
+  --white:        #ffffff;
+  --w90: rgba(255,255,255,0.90);
+  --w70: rgba(255,255,255,0.70);
+  --w55: rgba(255,255,255,0.55);
+  --w40: rgba(255,255,255,0.40);
+  --w25: rgba(255,255,255,0.25);
+  --w10: rgba(255,255,255,0.10);
+  --w08: rgba(255,255,255,0.08);
+  --w06: rgba(255,255,255,0.06);
+  --w04: rgba(255,255,255,0.04);
+  --bg:           #000000;
+  --f-head:  'Epilogue', sans-serif;
+  --f-body:  'DM Sans', sans-serif;
+  --f-disp:  'Outfit', sans-serif;
+}
+
+/* ─── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html   { scroll-behavior: smooth; font-size: 16px; }
+body   {
+  background: var(--bg);
+  color: var(--white);
+  font-family: var(--f-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+a      { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { cursor: pointer; font-family: inherit; border: none; background: none; }
+img    { display: block; max-width: 100%; }
+
+/* ─── Scrollbar ─────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 2px; }
+::selection               { background: rgba(124,58,237,0.35); color: #fff; }
+
+/* ─── Keyframes ─────────────────────────────────────────── */
+@keyframes fadeInUp  { from { opacity:0; transform:translateY(30px) } to { opacity:1; transform:none } }
+@keyframes fadeIn    { from { opacity:0 }                              to { opacity:1 }               }
+@keyframes slideLeft { from { opacity:0; transform:translateX(-28px) } to { opacity:1; transform:none } }
+@keyframes slideRight{ from { opacity:0; transform:translateX(28px) }  to { opacity:1; transform:none } }
+@keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0} }
+@keyframes pulseGlow { 0%,100%{box-shadow:0 0 6px 2px rgba(52,211,153,.6)} 50%{box-shadow:0 0 14px 5px rgba(52,211,153,.9)} }
+@keyframes gradShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+@keyframes scrollWheel{ 0%{opacity:1;transform:translateY(0)} 100%{opacity:0;transform:translateY(10px)} }
+@keyframes orb1      { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(60px,-40px) scale(1.1)} 66%{transform:translate(-40px,50px) scale(0.9)} }
+@keyframes orb2      { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(-50px,60px) scale(0.95)} 66%{transform:translate(70px,-30px) scale(1.05)} }
+@keyframes noiseAnim { 0%{transform:translate(0,0)} 10%{transform:translate(-3%,-3%)} 20%{transform:translate(3%,3%)} 30%{transform:translate(-3%,3%)} 40%{transform:translate(3%,-3%)} 50%{transform:translate(-3%,-3%)} 60%{transform:translate(3%,3%)} 70%{transform:translate(-3%,3%)} 80%{transform:translate(3%,-3%)} 90%{transform:translate(-3%,-3%)} 100%{transform:translate(0,0)} }
+@keyframes progressFill { from{width:0} to{width:100%} }
+@keyframes spinSlow  { from{transform:rotate(0)} to{transform:rotate(360deg)} }
+@keyframes shimmer   { 0%{background-position:-200% center} 100%{background-position:200% center} }
+@keyframes burnIn    { from{opacity:0;filter:brightness(3) blur(4px)} to{opacity:1;filter:brightness(1) blur(0)} }
+
+/* ─── Shared layout helpers ─────────────────────────────── */
+.sec          { background:var(--bg); padding:88px 24px; }
+.sec-white    { background:#fff; color:#000; padding:88px 24px; }
+.wrap         { max-width:1200px; margin:0 auto; }
+.wrap-lg      { max-width:1152px; margin:0 auto; }
+
+@media(min-width:640px)  { .sec,.sec-white{ padding:88px 40px } }
+@media(min-width:768px)  { .sec,.sec-white{ padding:100px 52px } }
+
+.sec-label {
+  font-family: var(--f-disp);
+  font-size: 11px; font-weight:600;
+  letter-spacing:.20em; text-transform:uppercase;
+  color: var(--violet-dim);
+  margin-bottom: 14px;
+}
+
+/* ─── Noise overlay ─────────────────────────────────────── */
+.noise-overlay {
+  pointer-events: none;
+  position: fixed; inset:0; z-index:9999;
+  opacity:.35;
+  will-change: transform;
+  animation: noiseAnim .12s steps(1) infinite;
+}
+.noise-overlay::after {
+  content:'';
+  position:absolute; inset:-50%;
+  width:200%; height:200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+}

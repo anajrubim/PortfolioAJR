@@ -1,0 +1,31 @@
+.kn-h2 { font-family:var(--f-disp); font-size:clamp(30px,5vw,52px); font-weight:600; letter-spacing:-.025em; color:#fff; line-height:1.05; margin-bottom:14px; opacity:0; transform:translateY(20px); transition:opacity .6s,transform .6s; }
+.kn-h2--in { opacity:1; transform:none; }
+.kn-sub { font-family:var(--f-body); font-size:15px; line-height:1.55; color:var(--w40); max-width:480px; }
+.kn-sub em { color:var(--w60, var(--w55)); font-style:normal; }
+.kn-div { height:1px; background:var(--w06); margin:32px 0; }
+
+.kn-grid { display:grid; grid-template-columns:repeat(5,1fr); }
+@media(max-width:900px){ .kn-grid { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:540px){ .kn-grid { grid-template-columns:repeat(2,1fr); } }
+
+.kn-col {
+  padding:20px; border-right:1px solid var(--w06); border-radius:12px;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .5s,transform .5s,background .2s;
+}
+.kn-col--in  { opacity:1; transform:none; }
+.kn-col--dim { opacity:.42; }
+.kn-col:last-child { border-right:none; }
+.kn-col:hover { background:var(--w04); }
+
+.kn-col-lbl { display:flex; align-items:center; gap:8px; font-family:var(--f-body); font-size:10px; font-weight:500; letter-spacing:.18em; text-transform:uppercase; color:var(--w30, var(--w40)); margin-bottom:16px; }
+.kn-col-num { font-family:monospace; font-size:9px; color:var(--w18, rgba(255,255,255,.18)); }
+
+.kn-skills { display:flex; flex-direction:column; gap:2px; }
+.kn-skill  { display:flex; align-items:center; gap:10px; font-family:var(--f-body); font-size:14px; font-weight:500; line-height:2; color:var(--w75, var(--w70)); }
+.si { display:inline-block; width:16px; height:16px; flex-shrink:0; opacity:.78; }
+
+.kn-fn { display:flex; align-items:flex-start; gap:12px; margin-top:64px; font-family:var(--f-body); font-size:14px; line-height:1.65; color:var(--w65, var(--w70)); }
+.kn-fn-line { display:inline-block; width:24px; height:1px; background:var(--w65, var(--w70)); flex-shrink:0; margin-top:10px; }
+.kn-fn-link { background:none; border:none; cursor:pointer; font-family:inherit; font-size:inherit; color:var(--violet-light); text-decoration:underline; text-decoration-color:rgba(167,139,250,.35); text-underline-offset:3px; transition:color .2s; }
+.kn-fn-link:hover { color:rgba(167,139,250,1); }
