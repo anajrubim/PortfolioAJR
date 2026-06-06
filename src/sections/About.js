@@ -102,7 +102,6 @@ export default function About() {
             <footer className="abt-card-ft">Detalhes completos no currículo em PDF.</footer>
           </article>
 
-          {/* Idiomas */}
           <article className="abt-card abt-reveal" style={{'--d':'160ms'}}>
             <div className="abt-card-hd"><span className="abt-ci">04</span><h3 className="abt-ct">Idiomas</h3></div>
             {[['Português','Nativo'],['Inglês','Intermediário']].map(([n,l],i) => (

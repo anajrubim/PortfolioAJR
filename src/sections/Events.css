@@ -1,0 +1,71 @@
+.ev-reveal { opacity:0; transform:translateY(24px); transition:opacity .65s cubic-bezier(.22,1,.36,1), transform .65s cubic-bezier(.22,1,.36,1); transition-delay:var(--d,0ms); }
+.ev-reveal.--in { opacity:1; transform:none; }
+
+.ev-h2 {
+  font-family: var(--f-head);
+  font-size: clamp(28px,4.5vw,56px);
+  font-weight: 700; letter-spacing:-.025em; line-height:1.1;
+  margin-bottom: 14px; color: var(--w90);
+}
+.ev-sub {
+  font-size:16px; color:var(--w55); margin-bottom:48px; line-height:1.6;
+}
+
+.ev-list { display:flex; flex-direction:column; gap:16px; }
+
+.ev-card {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 28px 32px;
+  transition: border-color .25s, background .25s, transform .25s;
+}
+.ev-card:hover {
+  border-color: rgba(167,139,250,0.25);
+  background: rgba(167,139,250,0.04);
+  transform: translateX(4px);
+}
+.ev-card--highlight {
+  border-color: rgba(52,211,153,0.3);
+  background: rgba(52,211,153,0.04);
+}
+.ev-card--highlight:hover {
+  border-color: rgba(52,211,153,0.5);
+  background: rgba(52,211,153,0.07);
+}
+
+@media(max-width:560px){
+  .ev-card { grid-template-columns:1fr; gap:12px; padding:20px; }
+  .ev-card-left { flex-direction:row; display:flex; align-items:center; gap:12px; }
+}
+
+.ev-card-left {
+  display:flex; flex-direction:column; align-items:center;
+  gap:10px; padding-top:4px;
+}
+.ev-icon { font-size:28px; line-height:1; }
+.ev-year {
+  font-family: var(--f-disp);
+  font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--w40);
+}
+
+.ev-type-row { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.ev-type {
+  font-family: var(--f-disp);
+  font-size:10px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(167,139,250,.7);
+}
+.ev-badge {
+  font-family: var(--f-disp);
+  font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  background:rgba(52,211,153,0.15); border:1px solid rgba(52,211,153,0.35);
+  color:#34d399; padding:3px 10px; border-radius:20px;
+}
+
+.ev-name { font-size:17px; font-weight:700; color:var(--w90); margin-bottom:6px; line-height:1.3; }
+.ev-role { font-size:13px; color:rgba(167,139,250,.8); margin-bottom:10px; font-style:italic; }
+.ev-desc { font-size:14px; color:var(--w55); line-height:1.65; }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { skillGroups } from '../data';
+import { skillGroups, softSkills } from '../data';
 import './Knowledge.css';
 
 const CDN = 'https://cdn.jsdelivr.net/npm/simple-icons@13/icons';
@@ -27,7 +27,7 @@ export default function Knowledge() {
   const secRef = useRef(null);
 
   useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold:.15 });
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold:.1 });
     if (secRef.current) obs.observe(secRef.current);
     return () => obs.disconnect();
   }, []);
@@ -35,12 +35,12 @@ export default function Knowledge() {
   return (
     <section id="habilidades" className="sec" ref={secRef}>
       <div className="wrap-lg">
-        <p className="sec-label">Stack &amp; Ferramentas</p>
+        <p className="sec-label">Stack &amp; Habilidades</p>
         <h2 className={`kn-h2${visible?' kn-h2--in':''}`}>O que eu uso para construir.</h2>
-        <p className="kn-sub">Ferramentas que uso no dia a dia em projetos <em>reais</em>.</p>
+        <p className="kn-sub">Ferramentas e competências aplicadas em projetos <em>reais</em>.</p>
 
+        <div className="kn-section-title">Hard Skills — Técnicas</div>
         <div className="kn-div" aria-hidden />
-
         <div className="kn-grid">
           {skillGroups.map((g, i) => (
             <div
@@ -66,12 +66,32 @@ export default function Knowledge() {
           ))}
         </div>
 
+        <div className="kn-soft-header">
+          <div className="kn-section-title">Soft Skills — Comportamentais</div>
+          <div className="kn-div" aria-hidden />
+        </div>
+        <ul className="kn-soft-grid">
+          {softSkills.map((s, i) => (
+            <li
+              key={s.name}
+              className={`kn-soft-card${visible?' kn-soft-card--in':''}`}
+              style={{ transitionDelay:`${200 + i*60}ms` }}
+            >
+              <span className="kn-soft-icon">{s.icon}</span>
+              <div className="kn-soft-body">
+                <span className="kn-soft-name">{s.name}</span>
+                <span className="kn-soft-desc">{s.desc}</span>
+              </div>
+            </li>
+          ))}
+        </ul>
+
         <p className="kn-fn">
           <span className="kn-fn-line" aria-hidden />
           Aberta a novas ferramentas conforme o projeto exige.{' '}
-          <button className="kn-fn-link" onClick={() => window.open('/curriculo-joao-gabriel.pdf', '_blank')}>
+          <a href="#curriculo" className="kn-fn-link">
             Veja o meu currículo
-          </button>
+          </a>
           .
         </p>
       </div>

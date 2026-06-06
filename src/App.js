@@ -1,13 +1,16 @@
 import React, { useEffect, useRef } from 'react';
-import Navbar  from './components/Navbar';
-import Hero    from './sections/Hero';
-import About   from './sections/About';
-import Knowledge from './sections/Knowledge';
-import Projects  from './sections/Projects';
-import Hire      from './sections/Hire';
-import Contact   from './sections/Contact';
-import Footer    from './sections/Footer';
-import BackToTop from './components/BackToTop';
+import Navbar       from './components/Navbar';
+import Hero         from './sections/Hero';
+import About        from './sections/About';
+import Knowledge    from './sections/Knowledge';
+import Projects     from './sections/Projects';
+import Curriculum   from './sections/Curriculum';
+import Certificates from './sections/Certificates';
+import Events       from './sections/Events';
+import Hire         from './sections/Hire';
+import Contact      from './sections/Contact';
+import Footer       from './sections/Footer';
+import BackToTop    from './components/BackToTop';
 
 export default function App() {
   const appRef = useRef(null);
@@ -32,6 +35,9 @@ export default function App() {
         <About />
         <Knowledge />
         <Projects />
+        <Curriculum />
+        <Certificates />
+        <Events />
         <Hire />
       </main>
       <Footer />

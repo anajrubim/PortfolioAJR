@@ -52,3 +52,38 @@
   box-shadow:0 0 0 1px rgba(167,139,250,.25),0 8px 28px rgba(124,58,237,.3);
   gap:12px;
 }
+
+/* ── Detalhes expandíveis ─────────────────────── */
+.proj-status--active {
+  background: rgba(167,139,250,0.12);
+  color: var(--violet-light);
+  border-color: rgba(167,139,250,0.25);
+}
+
+.proj-details-btn {
+  display: inline-flex; align-items:center; gap:6px;
+  font-family: var(--f-disp); font-size:12px; font-weight:600;
+  color: var(--w40); margin-top:4px;
+  transition: color .2s;
+}
+.proj-details-btn:hover { color: var(--violet-light); }
+
+.proj-chevron { display:flex; transition:transform .25s cubic-bezier(.22,1,.36,1); }
+.proj-chevron--up { transform:rotate(180deg); }
+
+.proj-details {
+  display: flex; flex-direction:column; gap:12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 10px; padding:16px;
+  animation: fadeInUp .3s cubic-bezier(.22,1,.36,1);
+}
+
+.proj-detail-row { display:flex; flex-direction:column; gap:4px; }
+.proj-detail-label {
+  font-family:var(--f-disp); font-size:10px; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; color:rgba(167,139,250,.7);
+}
+.proj-detail-val {
+  font-size:13px; color:var(--w55); line-height:1.6;
+}
