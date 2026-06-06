@@ -7,6 +7,7 @@ import Projects     from './sections/Projects';
 import Curriculum   from './sections/Curriculum';
 import Certificates from './sections/Certificates';
 import Events       from './sections/Events';
+import Gallery      from './sections/Gallery';
 import Hire         from './sections/Hire';
 import Contact      from './sections/Contact';
 import Footer       from './sections/Footer';
@@ -38,8 +39,10 @@ export default function App() {
         <Curriculum />
         <Certificates />
         <Events />
+        <Gallery />
         <Hire />
       </main>
+      <Contact />
       <Footer />
       <BackToTop />
     </div>
