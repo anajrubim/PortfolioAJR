@@ -68,7 +68,6 @@ export default function Hire() {
 
       <div className="wrap hire__inner">
 
-        {/* Cabeçalho */}
         <div className="hire__header hire-reveal">
           <div className="hire__badge">
             <span className="hire__badge-dot" aria-hidden />
@@ -94,7 +93,6 @@ export default function Hire() {
           </div>
         </div>
 
-        {/* Grid de serviços */}
         <div className="hire__services-grid hire-reveal" style={{'--d':'120ms'}}>
           {SERVICES.map((s, i) => (
             <div key={i} className="hire__service-card" style={{'--i': i}}>
@@ -105,7 +103,6 @@ export default function Hire() {
           ))}
         </div>
 
-        {/* Como funciona */}
         <div className="hire__steps-section hire-reveal" style={{'--d':'200ms'}}>
           <p className="hire__steps-label">Como funciona</p>
           <div className="hire__steps">
