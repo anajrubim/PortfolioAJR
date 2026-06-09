@@ -79,7 +79,7 @@ export default function Hire() {
           </h2>
           <p className="hire__subtext">
             Estou disponível para projetos freelance, colaborações e oportunidades CLT/PJ.
-            Se você tem uma ideia ou precisa de uma dev dedicada — estou aqui.
+            Se você tem uma ideia ou precisa de uma dev dedicada, estou aqui.
           </p>
           <div className="hire__cta-group">
             <a href={`mailto:${LINKS.email}`} className="hire__cta hire__cta--fill">

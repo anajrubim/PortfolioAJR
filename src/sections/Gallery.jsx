@@ -18,7 +18,7 @@ export default function Gallery() {
           <p className="gallery__label">Criatividade em foco</p>
           <h2 className="gallery__title">Galeria de <span>Designs</span></h2>
           <p className="gallery__subtitle">
-            Uma seleção de trabalhos visuais — interfaces, protótipos e identidades
+            Uma seleção de trabalhos visuais: interfaces, protótipos e identidades
             desenvolvidos ao longo da minha trajetória.
           </p>
         </header>
