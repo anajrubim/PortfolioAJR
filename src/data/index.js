@@ -194,7 +194,7 @@ export const galleryItems = [
     tool: 'Figma',
     desc: 'Ferramenta de monitoramento de tendências do mercado de importação e exportação no estado de São Paulo.',
     color: '#7c3aed',
-    img: '/gallery/api1.png',   
+    img: './gallery/api1.png',   
   },
   {
     id: 2,
@@ -203,7 +203,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Rede social com proposta de diminuir o tempo de tela de seus usuários',
     color: '#0ea5e9',
-    img: '/gallery/slow.png',
+    img: './gallery/slow.png',
   },
   {
     id: 3,
@@ -212,7 +212,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Plataforma única que centralize e padronize processos administrativos, comerciais e operacionais.',
     color: '#10b981',
-    img: '/gallery/api2.png',
+    img: './gallery/api2.png',
   },
   {
     id: 4,
@@ -221,7 +221,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Branding desenvolvido para a cafeteria fictícia Tá Quente!',
     color: '#f59e0b',
-    img: '/gallery/taquente.png',
+    img: './gallery/taquente.png',
   },
   {
     id: 5,
@@ -230,7 +230,7 @@ export const galleryItems = [
     tool: 'Figma',
     desc: 'Plataforma de controle de apontamento de horas e processos administrativos.',
     color: '#ec4899',
-    img: '/gallery/api3.jpeg',
+    img: './gallery/api3.jpeg',
   },
   {
     id: 6,
@@ -239,7 +239,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Material visual para apresentação do API desenvolvido para a empresa GSW',
     color: '#6366f1',
-    img: '/gallery/gsw.png',
+    img: './gallery/gsw.png',
   },
     {
     id: 7,
@@ -248,7 +248,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Material visual para apresentação do API desenvolvido para a empresa NeweLog',
     color: '#6366f1',
-    img: '/gallery/newe.png',
+    img: './gallery/newe.png',
   },
   {
     id: 8,
@@ -257,7 +257,7 @@ export const galleryItems = [
     tool: 'Figma',
     desc: 'Site de Turismo da cidade de Belo Horizonte',
     color: '#0ea5e9',
-    img: '/gallery/turismo.png',
+    img: './gallery/turismo.png',
   },
   {
     id: 9,
@@ -266,7 +266,7 @@ export const galleryItems = [
     tool: 'Figma',
     desc: 'Site de vendas de artigos de bolha de sabão',
     color: '#0ea5e9',
-    img: '/gallery/bolhas.png',
+    img: './gallery/bolhas.png',
   },
   {
     id: 10,
@@ -275,7 +275,7 @@ export const galleryItems = [
     tool: 'Figma',
     desc: 'Site de cursos gratuitos de tecnologia',
     color: '#0ea5e9',
-    img: '/gallery/curso.png',
+    img: './gallery/curso.png',
   },
   {
     id: 11,
@@ -284,7 +284,7 @@ export const galleryItems = [
     tool: 'Figma',
     desc: 'Portal de concentração de lojas de diversos segmentos',
     color: '#0ea5e9',
-    img: '/gallery/portal.png',
+    img: './gallery/portal.png',
   },
   {
     id: 12,
@@ -293,7 +293,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Serviço de Streaming de filmes e séries.',
     color: '#0ea5e9',
-    img: '/gallery/series.png',
+    img: './gallery/series.png',
   },
   {
     id: 13,
@@ -302,7 +302,7 @@ export const galleryItems = [
     tool: 'Canva',
     desc: 'Site voltado ao compartilhamento de uma experiência de viagem pessoal',
     color: '#0ea5e9',
-    img: '/gallery/viagem.png',
+    img: './gallery/viagem.png',
   },
   
 ];
