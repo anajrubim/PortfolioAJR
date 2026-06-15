@@ -66,7 +66,7 @@ export default function Curriculum() {
 
         <div className="cv-cta cv-reveal" style={{'--d':'200ms'}}>
           <p className="cv-cta-text">Currículo completo disponível para download</p>
-          <a href="/AnaJRubimCV.pdf" download="AnaJRubimCV.pdf" rel="noopener noreferrer" className="cv-cta-btn">
+          <a href="./AnaJRubimCV.pdf" download="AnaJRubimCV.pdf" rel="noopener noreferrer" className="cv-cta-btn">
             Baixar CV em PDF
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
