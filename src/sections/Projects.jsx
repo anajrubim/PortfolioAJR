@@ -56,6 +56,14 @@ function ProjectCard({ p, i }) {
               <p className="proj-detail-val">{p.participation}</p>
             </div>
           )}
+          {p.experience && (
+          <div className="proj-detail-row">
+            <span className="proj-detail-label">
+              Experiência
+            </span>
+            <p className="proj-detail-val">{p.experience}</p>
+          </div>
+)}
         </div>
       )}
 
